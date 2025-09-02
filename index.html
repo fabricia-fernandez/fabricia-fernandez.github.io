@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Conversas do MSN</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* Evita barras de rolagem no corpo principal */
+        }
+        .sidebar {
+            width: 280px;
+            background-color: #f0f8ff; /* AliceBlue, uma cor suave */
+            padding: 15px;
+            overflow-y: auto; /* Adiciona barra de rolagem se a lista for grande */
+            border-right: 1px solid #d4e8fa;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            color: #1987cc;
+            border-bottom: 2px solid #6ed6f3;
+            padding-bottom: 10px;
+        }
+        .lista-conversas {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .lista-conversas li a {
+            display: block;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .lista-conversas li a:hover {
+            background-color: #dcf7fd;
+        }
+        .lista-conversas li a.active {
+            background-color: #3aba07;
+            color: white;
+            font-weight: bold;
+        }
+        .content {
+            flex-grow: 1; /* Ocupa o resto do espaço */
+            padding: 20px 40px;
+            overflow-y: auto; /* Área de rolagem para a conversa */
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #container-conversas .mplsession {
+             margin-bottom: 40px; /* Adiciona um espaço entre as sessões de conversa */
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Conversas</h2>
+        <ul class="lista-conversas">
+        <li><a href="#" data-arquivo="adalcorreaqi@hotmail.com.html">adalcorreaqi@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="alessandro22jp@hotmail.com.html">alessandro22jp@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="alissonalessandro@hotmail.com.html">alissonalessandro@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="antony_matheus@hotmail.com.html">antony_matheus@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="aricia-medeiros@hotmail.com.html">aricia-medeiros@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="assis_ol@hotmail.com.html">assis_ol@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="benoni_neto@hotmail.com.html">benoni_neto@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="brunox_pg@hotmail.com.html">brunox_pg@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="carlos.balei@hotmail.com.html">carlos.balei@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="carloves@hotmail.com.html">carloves@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="castelo206@hotmail.com.html">castelo206@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="cleidiane.enf@hotmail.com.html">cleidiane.enf@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="ericovale@hotmail.com.html">ericovale@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="fabinhocunha_@hotmail.com.html">fabinhocunha_@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="fabiohdmoreira@hotmail.com.html">fabiohdmoreira@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="fabriciojhol@hotmail.com.html">fabriciojhol@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="fabricioribeiro_pho@hotmail.com.html">fabricioribeiro_pho@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="flavio_rochemback@hotmail.com.html">flavio_rochemback@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="fmendes79@hotmail.com.html">fmendes79@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="francknetto@yahoo.com.br.html">francknetto@yahoo.com.br</a></li>
+        <li><a href="#" data-arquivo="g.f.15@hotmail.com.html">g.f.15@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="gagazinhagta@hotmail.com.html">gagazinhagta@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="gilharlay@hotmail.com.html">gilharlay@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="gui.slz@hotmail.com.html">gui.slz@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="hans_dominny@hotmail.com.html">hans_dominny@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="henrique.ter@hotmail.com.html">henrique.ter@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="heraldomgouveia@hotmail.com.html">heraldomgouveia@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="jacksoncleuber@hotmail.com.html">jacksoncleuber@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="jarisonbombadoweba@hotmail.com.html">jarisonbombadoweba@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="jasminny_sp@hotmail.com.html">jasminny_sp@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="jeffymaia6@hotmail.com.html">jeffymaia6@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="laylsondias@hotmail.com.html">laylsondias@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="leandro_borgea26@hotmail.com.html">leandro_borgea26@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="leilson_costa@hotmail.com.html">leilson_costa@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="leo-slobato@hotmail.com.html">leo-slobato@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="lhdfonseca@hotmail.com.html">lhdfonseca@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="lllago3@hotmail.com.html">lllago3@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="lobato_leonardo@hotmail.com.html">lobato_leonardo@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="lucasdanilucci@msn.com.html">lucasdanilucci@msn.com</a></li>
+        <li><a href="#" data-arquivo="luciano-pereira@hotmail.com.html">luciano-pereira@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="marcos_barreto06@hotmail.com.html">marcos_barreto06@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="mathbbrch@hotmail.com.html">mathbbrch@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="mayramaciel_@hotmail.com.html">mayramaciel_@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="mdj_lpjj@hotmail.com.html">mdj_lpjj@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="mircmouse@bol.com.br.html">mircmouse@bol.com.br</a></li>
+        <li><a href="#" data-arquivo="mistersiri@hotmail.com.html">mistersiri@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="nelsinho_scc@hotmail.com.html">nelsinho_scc@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="ptkat@hotmail.com.html">ptkat@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="ram_esty@hotmail.com.html">ram_esty@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="ricardo_ch_lima@hotmail.com.html">ricardo_ch_lima@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="richardsonraggio@hotmail.com.html">richardsonraggio@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="rodrigodavinti@hotmail.com.html">rodrigodavinti@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="roneypurorally@hotmail.com.html">roneypurorally@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="samayra_dias@hotmail.com.html">samayra_dias@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="saviodecaprio@hotmail.com.html">saviodecaprio@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="senhorbot@hotmail.com.html">senhorbot@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="show.b@hotmail.com.html">show.b@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="silvercarvalho@hotmail.com.html">silvercarvalho@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="thayse_raquel@hotmail.com.html">thayse_raquel@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="thiaguinho.ago@hotmail.com.html">thiaguinho.ago@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="thiegoacb@hotmail.com.html">thiegoacb@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="uni.ivo@hotmail.com.html">uni.ivo@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="wagnertody@hotmail.com.html">wagnertody@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="wasleycristiano@hotmail.com.html">wasleycristiano@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="windsonjames@hotmail.com.html">windsonjames@hotmail.com</a></li>
+        <li><a href="#" data-arquivo="wylker_21@hotmail.com.html">wylker_21@hotmail.com</a></li>
+</ul>
+    </aside>
+
+    <main class="content">
+        <div id="container-conversas">
+            <h1 style="color: #ccc; text-align: center; margin-top: 100px;">
+                Selecione uma conversa na lista ao lado para visualizar.
+            </h1>
+        </div>
+    </main>
+
+    <script>
+        // Esta é a "mágica" que faz a página funcionar
+        document.addEventListener('DOMContentLoaded', () => {
+            const linksConversas = document.querySelectorAll('.lista-conversas a');
+            const container = document.getElementById('container-conversas');
+
+            linksConversas.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Impede que o navegador pule para outra página
+
+                    // Remove a classe 'active' de qualquer outro link que a tenha
+                    linksConversas.forEach(l => l.classList.remove('active'));
+                    // Adiciona a classe 'active' ao link clicado para destacá-lo
+                    link.classList.add('active');
+
+                    const nomeArquivo = link.dataset.arquivo;
+                    
+                    container.innerHTML = '<p>Carregando conversa...</p>';
+
+                    // Usa a API Fetch para buscar o conteúdo do arquivo clicado
+                    fetch(`Lista/${nomeArquivo}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Erro ao carregar o arquivo da conversa.');
+                            }
+                            return response.text(); // Converte a resposta em texto (HTML)
+                        })
+                        .then(html => {
+                            container.innerHTML = html; // Insere o HTML da conversa no container
+                        })
+                        .catch(error => {
+                            console.error('Erro:', error);
+                            container.innerHTML = `<p style="color: red;">Não foi possível carregar a conversa. Verifique o console para mais detalhes.</p>`;
+                        });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
